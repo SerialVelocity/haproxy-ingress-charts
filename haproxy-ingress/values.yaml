@@ -159,6 +159,13 @@ controller:
   # is merged
   hostNetwork: false
 
+  # Add extra ports to the Deployment/DaemonSet
+  # Useful when adding the 'tcp-service-port' configuration key
+  # Ref: https://haproxy-ingress.github.io/v0.13/docs/configuration/keys/#tcp-services
+  extraPorts: []
+  # - containerPort: 8080
+  #   hostPort: 30012
+
   # Optionally change this to ClusterFirstWithHostNet in case you have 'hostNetwork: true'.
   # By default, while using host network, name resolution uses the host's DNS. If you wish nginx-controller
   # to keep resolving names inside the k8s network, use ClusterFirstWithHostNet.
